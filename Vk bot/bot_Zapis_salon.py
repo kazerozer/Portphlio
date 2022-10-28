@@ -22,13 +22,13 @@ db = MySQLDatabase(
 
 
 class BaseTable(Model):
-    # В подклассе Meta указываем подключение к той или иной базе данных
+  
     class Meta:
         database = db
 
 
 class rabotniki(BaseTable):
-    # В подклассе Meta указываем подключение к той или иной базе данных
+   
     # Специалист = TextField()
     # услуга = TextField()
     # время = TimeField()
@@ -41,7 +41,7 @@ class rabotniki(BaseTable):
 
 
 class raspisanie(BaseTable):
-    # В подклассе Meta указываем подключение к той или иной базе данных
+  
     Специалист = ForeignKeyField(rabotniki)
     услуга = TextField()
     время = DateTimeField()
