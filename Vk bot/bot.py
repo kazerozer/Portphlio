@@ -1,7 +1,5 @@
 import random
 import logging
-
-import requests
 import vk_api
 from vk_api.bot_longpoll import VkBotLongPoll, VkBotEventType
 import os.path
@@ -134,53 +132,6 @@ class Bot:
         else:
             print(event.type)
 
-        # pic = event.obj.message['attachments'][0]['photo']['sizes'][-1]['url']
-
-                # print(user)
-                # print(self.anecdots, self.talk)
-                # fullname = user[0]['first_name']
-                # log.info(f"Пользователь - {fullname} написал:{message} ")
-                # if self.anecdots:
-                #     if message in agree_words:
-                #         self.write_msg(id=id, message=random.sample(anekdots, 4))
-                #         self.write_msg(id=id, message='Хочешь ещё один Да/Нет?')
-                #     elif message in no_words:
-                #         self.write_msg(id=id, message='Хорошо, был рад вам помочь')
-                #         self.anecdots = False
-                #     else:
-                #         self.write_msg(id=id, message='Я вас не понял, так вы хотите Да/Нет?')
-                # elif self.talk:
-                #     if message != 'хватит':
-                #         self.write_msg(id=id, message=pipe.predict([message])[0])
-                #     else:
-                #         self.write_msg(id=id, message='Хорошо, приятно было поболтать!')
-                #         self.talk = False
-                # else:
-                #     if message in good_words:
-                #         # self.vk.method("messages.send", {"peer_id": id, "message": f"Привет {fullname}", "random_id": random.randint(0, 2 ** 20)})
-                #         self.write_msg(id=id,
-                #                        message=f"Привет {fullname}, я обычный чат бот, работаю здесь и болтаю со всеми.")
-                #         self.write_msg(id=id,
-                #                        message=f"Если хочешь узнать что ещё я могу спроси у меня 'Что ты можешь?'.")
-                #     elif message in bad_words:
-                #         self.write_msg(id=id, message="и этими губами ты целуешь свою маму?")
-                #         self.write_msg(id=id, message="надо будет спросить, когда зайду к ней сегодня вечерком :)")
-                #     elif message == 'что ты можешь?':
-                #
-                #         self.write_msg(id=id,
-                #                        message='Если хочешь могу рассказать тебе Анекдот?. (Напиши: "Хочу анекдот")')
-                #         self.write_msg(id=id,
-                #                        message='Или можем просто поболтать (Напиши: "Давай поболтаем")')
-                #     elif message == 'хочу анекдот':
-                #         self.anecdots = True
-                #         self.write_msg(id=id, message=random.sample(anekdots, 4))
-                #         self.write_msg(id=id, message='Хочешь ещё один Да/Нет?')
-                #     elif message == 'давай поболтаем':
-                #         self.talk = True
-                #         self.write_msg(id=id, message='Хорошо,давай поболтаем, если надоест, напиши "Хватит"')
-                #         self.write_msg(id=id, message='Ты начинай, первым.')
-                #     else:
-                #         self.write_msg(id=id, message="Я ваша не понимать")
 
 
 if __name__ == '__main__':
